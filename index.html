@@ -1,36 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paradise is There - Premium Fruits from Central Russia</title>
+    <title>Paradise is Here - Органические фрукты из Центральной России</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Органические фрукты из Центральной России. Яблоки Антоновка, черная смородина, вишня Владимирская. Семейная ферма с 1995 года. Доставка по всей России.">
+    <meta name="keywords" content="органические фрукты, яблоки антоновка, черная смородина, вишня владимирская, фермерские продукты, центральная россия">
+    <meta name="author" content="Paradise is Here">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Paradise is Here - Органические фрукты из Центральной России">
+    <meta property="og:description" content="Откройте для себя подлинный вкус лучших органических фруктов Центральной России. Семейная ферма с 1995 года.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://ginasen.github.io/course-landing3/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Paradise is Here - Органические фрукты">
+    <meta name="twitter:description" content="Органические фрукты из Центральной России. Семейная ферма с 1995 года.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Paradise is Here",
+        "description": "Органические фрукты из Центральной России",
+        "url": "https://ginasen.github.io/course-landing3/",
+        "telephone": "+7 (495) 123-4567",
+        "email": "hello@paradiseishere.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Orchard Lane",
+            "addressLocality": "Central District",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 08:00-20:00",
+        "foundingDate": "1995",
+        "priceRange": "$$",
+        "servesCuisine": "Organic Fruits",
+        "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    }
+    </script>
+    
     <style>
         :root {
-            --primary-brown: #8B5A2B;
-            --light-brown: #D2B48C;
-            --dark-green: #556B2F;
-            --light-green: #8FBC8F;
+            --primary-brown: #28A745;
+            --light-brown: #E8F5E9;
+            --dark-green: #1A431A;
+            --light-green: #4CAF50;
             --cream: #F5F5DC;
-            --text-dark: #333;
+            --accent-orange: #FF6B35;
+            --accent-red: #E74C3C;
+            --text-dark: #2C3E50;
             --text-light: #f8f8f8;
+            --text-gray: #7F8C8D;
+            --white: #FFFFFF;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light-brown);
         }
 
         html {
             scroll-behavior: smooth;
         }
 
-        body {
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.6;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         /* Navigation */
@@ -39,17 +144,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 220, 0.95));
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px var(--shadow-light);
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 220, 0.98));
+            box-shadow: 0 6px 30px var(--shadow-medium);
         }
 
         .nav-container {
@@ -63,16 +168,22 @@
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--dark-green);
             text-decoration: none;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo i {
             margin-right: 0.5rem;
-            color: var(--primary-brown);
+            color: var(--accent-orange);
+            animation: pulse 2s infinite;
         }
 
         .nav-links {
@@ -90,22 +201,25 @@
             font-weight: 500;
             font-size: 1.1rem;
             position: relative;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
         }
 
         .nav-links a:after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
-            bottom: -4px;
+            height: 3px;
+            bottom: 0;
             left: 0;
-            background-color: var(--primary-brown);
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-red));
             transition: width 0.3s ease;
+            border-radius: 2px;
         }
 
         .nav-links a:hover {
-            color: var(--primary-brown);
+            color: var(--accent-orange);
+            transform: translateY(-2px);
         }
 
         .nav-links a:hover:after {
@@ -118,143 +232,228 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--primary-brown);
+            color: var(--accent-orange);
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger:hover {
+            transform: scale(1.1);
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(139, 90, 43, 0.3)), url('../apples-5543778_1280.jpg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--text-light);
             padding: 0 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
         }
 
         .hero-content {
             max-width: 800px;
             animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px var(--shadow-dark);
+            background: linear-gradient(135deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 4px var(--shadow-dark);
+            font-weight: 300;
         }
 
         .btn {
             display: inline-block;
-            background-color: var(--light-green);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
             color: var(--text-light);
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            background-color: transparent;
-            border-color: var(--light-green);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
         }
 
         .btn-primary {
-            background-color: var(--primary-brown);
-            border-color: var(--primary-brown);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
         }
 
         .btn-primary:hover {
-            color: var(--primary-brown);
-            background-color: transparent;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
         }
 
         /* Sections */
         section {
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             position: relative;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark-green);
+            font-size: 3rem;
+            color: var(--dark-green); /* Reverted to dark green */
             display: inline-block;
             position: relative;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--white); /* Specific rule for testimonials */
         }
 
         .section-title h2:after {
             content: '';
             position: absolute;
-            width: 50%;
-            height: 3px;
-            bottom: -10px;
-            left: 25%;
-            background-color: var(--primary-brown);
+            width: 60%;
+            height: 4px;
+            bottom: -15px;
+            left: 20%;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-red));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
         }
 
         /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--white), var(--cream));
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 2rem 0;
+            box-shadow: 0 20px 60px var(--shadow-light);
+        }
+
         .about-content {
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .about-text {
             flex: 1;
+            animation: slideInLeft 1s ease;
         }
 
         .about-text h3 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: var(--primary-brown);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             font-size: 1.1rem;
             line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow-light);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            margin-right: 1rem;
         }
 
         .about-image {
             flex: 1;
-            border-radius: 10px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 25px 50px var(--shadow-medium);
             transition: transform 0.5s ease;
+            animation: slideInRight 1s ease;
         }
 
         .about-image:hover {
-            transform: scale(1.03);
+            transform: scale(1.03) rotate(1deg);
         }
 
         .about-image img {
@@ -271,26 +470,45 @@
         /* Menu Preview */
         .menu-items {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
         .menu-item {
-            background-color: white;
-            border-radius: 10px;
+            background: var(--white);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px var(--shadow-light);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .menu-item:hover::before {
+            opacity: 0.1;
         }
 
         .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px var(--shadow-medium);
         }
 
         .menu-item-image {
-            height: 250px;
+            height: 280px;
             overflow: hidden;
+            position: relative;
         }
 
         .menu-item-image img {
@@ -301,73 +519,163 @@
         }
 
         .menu-item:hover .menu-item-image img {
-            transform: scale(1.1);
+            transform: scale(1.15);
+        }
+
+        .menu-item-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
         }
 
         .menu-item-content {
-            padding: 1.5rem;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .menu-item-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--dark-green);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .menu-item-content p {
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .price-nutrition {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
         }
 
         .price {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .nutrition {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--dark-green), var(--light-green));
+            color: var(--white);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 4rem auto; /* Centering the block itself */
+            text-align: center;
+            max-width: 1000px; /* Example max-width, adjust as needed */
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 900px; /* Adjust as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
             font-weight: 600;
-            color: var(--primary-brown);
+            color: var(--accent-orange);
         }
 
         /* Contact Section */
         .contact-container {
             display: flex;
-            gap: 3rem;
+            gap: 4rem;
+            align-items: stretch;
         }
 
         .contact-info {
             flex: 1;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px var(--shadow-light);
         }
 
         .contact-info h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary-brown);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
         }
 
         .contact-info p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-size: 1.1rem;
+            color: var(--text-gray);
         }
 
         .contact-details {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
         }
 
         .contact-details div {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-details div:hover {
+            background: var(--accent-orange);
+            color: var(--white);
+            transform: translateX(10px);
         }
 
         .contact-details i {
             margin-right: 1rem;
-            color: var(--primary-brown);
-            font-size: 1.2rem;
+            color: var(--accent-orange);
+            font-size: 1.3rem;
+            width: 20px;
+        }
+
+        .contact-details div:hover i {
+            color: var(--white);
         }
 
         .contact-map {
             flex: 1;
-            border-radius: 10px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            height: 400px;
+            box-shadow: 0 20px 50px var(--shadow-light);
+            height: 500px;
         }
 
         .contact-map iframe {
@@ -376,37 +684,176 @@
             border: none;
         }
 
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 4rem auto; /* Centering the block itself */
+            max-width: 800px; /* Example max-width, adjust as needed */
+        }
+
+        .newsletter h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--accent-orange);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
         /* Footer */
         footer {
-            background-color: var(--dark-green);
+            background: linear-gradient(135deg, var(--dark-green), var(--text-dark));
             color: var(--text-light);
-            text-align: center;
-            padding: 2rem;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
         }
 
-        .social-links {
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
             margin-bottom: 1.5rem;
+            color: var(--accent-orange);
+            font-weight: 600;
         }
 
-        .social-links a {
+        .footer-section p,
+        .footer-section a {
             color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
             transition: color 0.3s ease;
         }
 
+        .footer-section a:hover {
+            color: var(--accent-orange);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-orange);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
         .social-links a:hover {
-            color: var(--light-brown);
+            background: var(--accent-red);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .about-content, .contact-container {
+            .about-content, 
+            .contact-container {
                 flex-direction: column;
             }
 
-            .about-image, .contact-map {
+            .about-image, 
+            .contact-map {
                 order: -1;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
             }
         }
 
@@ -421,7 +868,8 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background-color: rgba(255, 255, 255, 0.98);
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 220, 0.98));
+                backdrop-filter: blur(15px);
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
@@ -437,34 +885,55 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
+                font-size: 2.2rem;
             }
 
             section {
                 padding: 4rem 1rem;
             }
 
+            .about,
+            .contact-info {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
             .menu-items {
                 grid-template-columns: 1fr;
             }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .loading.loaded {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -472,15 +941,18 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo"><i class="fas fa-apple-alt"></i> Paradise is Here</a>
-            <button class="hamburger" id="hamburger">
+            <a href="#" class="logo" aria-label="Paradise is Here - Главная">
+                <i class="fas fa-apple-alt" aria-hidden="true"></i> 
+                Paradise is Here
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Открыть меню">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Our Fruits</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#menu">Наши фрукты</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </div>
     </nav>
@@ -488,26 +960,45 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Nature's Sweetest Treasures</h1>
-            <p>Discover the authentic taste of Central Russia's finest organic fruits</p>
-            <a href="#menu" class="btn btn-primary">Explore Our Selection</a>
+            <h1>Сладчайшие сокровища природы</h1>
+            <p>Откройте для себя подлинный вкус лучших органических фруктов Центральной России</p>
+            <a href="#menu" class="btn btn-primary">Изучить наш ассортимент</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <div class="section-title">
-            <h2>Our Story</h2>
+            <h2>Наша история</h2>
+            <p class="section-subtitle">От нашей семейной фермы к вашему столу</p>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>From Our Family Farm to Your Table</h3>
-                <p>Founded in 1995, Paradise is Here began as a small family orchard in the heart of Central Russia. What started as a passion project to grow the most flavorful fruits using traditional methods has blossomed into a beloved destination for fruit enthusiasts.</p>
-                <p>We believe in sustainable farming practices that respect nature's balance. Our fruits are grown without synthetic pesticides or artificial enhancers, allowing their natural flavors to shine through.</p>
-                <p>Every piece of fruit we offer is hand-picked at peak ripeness, ensuring you experience nature's sweetness exactly as intended.</p>
+                <h3>От нашей семейной фермы к вашему столу</h3>
+                <p>Основанная в 1995 году, "Paradise is Here" начиналась как небольшой семейный сад в самом сердце Центральной России. То, что начиналось как страстный проект по выращиванию самых ароматных фруктов традиционными методами, превратилось в любимое место для любителей фруктов.</p>
+                <p>Мы верим в устойчивые методы ведения сельского хозяйства, которые уважают баланс природы. Наши фрукты выращиваются без синтетических пестицидов или искусственных усилителей, что позволяет их естественным вкусам сиять.</p>
+                <p>Каждый фрукт, который мы предлагаем, собирается вручную на пике зрелости, гарантируя, что вы испытаете сладость природы именно так, как задумано.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Органическое земледелие</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Ручной сбор</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Без пестицидов</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tractor"></i>
+                        <span>Семейная ферма</span>
+                    </div>
+                </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Family working in orchard">
+                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Семья работает в саду">
             </div>
         </div>
     </section>
@@ -515,86 +1006,159 @@
     <!-- Menu Preview -->
     <section id="menu">
         <div class="section-title">
-            <h2>Our Signature Fruits</h2>
+            <h2>Наши фирменные фрукты</h2>
+            <p class="section-subtitle">Откройте для себя наши уникальные сорта, выращенные с любовью</p>
         </div>
         <div class="menu-items">
             <div class="menu-item">
                 <div class="menu-item-image">
-                    <img src="https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Russian Apples">
+                    <img src="https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Русские яблоки">
+                    <span class="menu-item-badge">Сезонный</span>
                 </div>
                 <div class="menu-item-content">
-                    <h3>Antonovka Apples</h3>
-                    <p>The legendary Russian apple with a perfect balance of tart and sweet. Grown in our oldest orchard trees, these apples have a distinctive aroma and crisp texture that makes them perfect for both fresh eating and baking.</p>
-                    <p class="price">$4.99 / kg</p>
+                    <h3>Яблоки Антоновка</h3>
+                    <p>Легендарное русское яблоко с идеальным балансом терпкости и сладости. Выращенные на наших старейших садовых деревьях, эти яблоки обладают неповторимым ароматом и хрустящей текстурой, что делает их идеальными как для свежего употребления, так и для выпечки.</p>
+                    <div class="price-nutrition">
+                        <p class="price">$4.99 / кг</p>
+                        <span class="nutrition">120 ккал / 100г</span>
+                    </div>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-image">
-                    <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="Russian Berries">
+                    <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="Русские ягоды">
+                    <span class="menu-item-badge">Новинка</span>
                 </div>
                 <div class="menu-item-content">
-                    <h3>Black Currants</h3>
-                    <p>Our organic black currants are packed with antioxidants and have an intense, rich flavor. Grown in the cool climate of Central Russia, these small berries deliver a powerful taste experience unlike any other.</p>
-                    <p class="price">$8.99 / 250g</p>
+                    <h3>Черная смородина</h3>
+                    <p>Наша органическая черная смородина богата антиоксидантами и обладает интенсивным, насыщенным вкусом. Выращенные в прохладном климате Центральной России, эти мелкие ягоды дарят мощный вкусовой опыт, не похожий ни на что другое.</p>
+                    <div class="price-nutrition">
+                        <p class="price">$8.99 / 250г</p>
+                        <span class="nutrition">63 ккал / 100г</span>
+                    </div>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-image">
-                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Russian Cherries">
+                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Русские вишни">
+                    <span class="menu-item-badge">Ограниченная серия</span>
                 </div>
                 <div class="menu-item-content">
-                    <h3>Vladimir Cherries</h3>
-                    <p>A prized variety from the Vladimir region, these cherries have a deep red color and exceptionally sweet flavor. Each summer we harvest these gems for just a few precious weeks when they're at their absolute best.</p>
-                    <p class="price">$12.99 / kg</p>
+                    <h3>Владимирская вишня</h3>
+                    <p>Ценный сорт из Владимирской области, эти вишни имеют глубокий красный цвет и исключительно сладкий вкус. Каждое лето мы собираем эти драгоценные камни всего за несколько драгоценных недель, когда они находятся на пике своего развития.</p>
+                    <div class="price-nutrition">
+                        <p class="price">$12.99 / кг</p>
+                        <span class="nutrition">50 ккал / 100г</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Что говорят наши клиенты</h2>
+            <p class="section-subtitle">Отзывы о наших свежих и вкусных фруктах</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p class="testimonial-text">"Фрукты от Paradise is Here просто невероятны! Вкус как из детства, очень свежие и ароматные. Обязательно буду заказывать еще!"</p>
+                <p class="testimonial-author">- Анна К., Москва</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Яблоки Антоновка - это нечто! Идеально подходят для шарлотки. Чувствуется, что выращены с любовью и заботой."</p>
+                <p class="testimonial-author">- Иван П., Санкт-Петербург</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Черная смородина просто взрыв вкуса! Делаю из нее морсы и варенье. Очень довольна качеством и быстрой доставкой."</p>
+                <p class="testimonial-author">- Елена С., Казань</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h3>Подпишитесь на нашу рассылку</h3>
+        <p>Получайте эксклюзивные предложения и новости о свежих урожаях прямо на вашу почту!</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Ваш email" aria-label="Ваш email">
+            <button type="submit">Подписаться</button>
+        </form>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-title">
-            <h2>Visit Us</h2>
+            <h2>Посетите нас</h2>
+            <p class="section-subtitle">Мы всегда рады видеть вас на нашей ферме!</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Come Taste Paradise</h3>
-                <p>We welcome you to visit our store and experience the freshness of our fruits firsthand. Our knowledgeable staff will help you select the perfect fruits for any occasion.</p>
+                <h3>Приезжайте попробовать рай</h3>
+                <p>Приглашаем вас посетить наш магазин и лично убедиться в свежести наших фруктов. Наши знающие сотрудники помогут вам выбрать идеальные фрукты для любого случая.</p>
                 <div class="contact-details">
                     <div>
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <p>123 Orchard Lane, Central District, Russia</p>
                     </div>
                     <div>
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone" aria-hidden="true"></i>
                         <p>+7 (495) 123-4567</p>
                     </div>
                     <div>
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <p>hello@paradiseishere.com</p>
                     </div>
                     <div>
-                        <i class="fas fa-clock"></i>
-                        <p>Open daily: 8:00 AM - 8:00 PM</p>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <p>Открыто ежедневно: 8:00 - 20:00</p>
                     </div>
                 </div>
             </div>
             <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372951144276!2d37.61729931593095!3d55.75582628055306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2sRed%20Square!5e0!3m2!1sen!2sru!4v1620000000000!5m2!1sen!2sru" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372951144276!2d37.61729931593095!3d55.75582628055306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2sRed%20Square!5e0!3m2!1sen!2sru!4v1620000000000!5m2!1sen!2sru" allowfullscreen="" loading="lazy" title="Карта нашего местоположения"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Paradise is Here</h4>
+                <p>Органические фрукты из Центральной России, выращенные с любовью и заботой с 1995 года.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Быстрые ссылки</h4>
+                <a href="#home">Главная</a>
+                <a href="#about">О нас</a>
+                <a href="#menu">Наши фрукты</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>123 Orchard Lane, Central District, Russia</p>
+                <p>+7 (495) 123-4567</p>
+                <p>hello@paradiseishere.com</p>
+                <p>Открыто ежедневно: 8:00 - 20:00</p>
+            </div>
         </div>
-        <p>&copy; 2023 Paradise is Here. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Paradise is Here. Все права защищены.</p>
+        </div>
     </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Прокрутить вверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script>
         // Mobile Navigation
@@ -620,6 +1184,45 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Scroll to top button functionality
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation to sections
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.classList.add('loading');
+            observer.observe(section);
         });
     </script>
 </body>
